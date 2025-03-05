@@ -1,27 +1,14 @@
 {
-  "name": "denode",
+  "name": "deno_shim",
   "version": "0.1.0",
-  "main": "index.js",
-  "author": "keroxp <kerokerokerop@gmail.com>",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "license": "MIT",
-  "scripts": {
-    "fmt": "prettier --write 'src/**/*.ts'",
-    "test": "jest --forceExit --detectOpenHandles"
-  },
   "devDependencies": {
-    "@types/jest": "^24.0.22",
-    "@types/node": "^12.12.6",
-    "jest": "^24.9.0",
-    "prettier": "^1.19.1",
-    "ts-jest": "^26.4.3",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.7.2"
+    "@deno/shim-deno": "~0.19.2"
   },
-  "dependencies": {
-    "js-base64": "^2.5.1",
-    "node-fetch": "^2.6.0"
-  },
-  "jest": {
-    "preset": "ts-jest"
+  "peerDependencies": {
+    "@deno/shim-deno": "~0.19.2"
   }
 }
